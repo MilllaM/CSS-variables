@@ -1,0 +1,77 @@
+/* Define variables for the root-element */
+:root {
+  --main-bg-color:#f4f4f4;  /*light grey */
+  --main-txt-color: #333; /* dark grey */
+  --container-width: 90%;
+  --header-bg-color: #333;
+  --header-txt-color: white;
+  --spacing: 10px;
+  --base: #99ff99;
+  --blur: 5px;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 20px auto; /* 20px top and bottom, auto left and right, which pushes everything to the middle */
+}
+
+header#main-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-txt-color);
+  padding-left: 10px;
+}
+
+header#main-header h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /*gives two equal boxes*/
+  grid-gap: 30px;
+  align-items: center;
+}
+
+/*Define box vars */
+.box {
+  --box-bg-color: #ebebe0; /*grey*/
+  --box-main-color: green;  /*#06c bright blue */
+  --box-padding: 5px 10px; /*5 left and right, 10 top and bottom */
+  --box-shadow-h-offset: 10px; /* horizntal */
+  --box-shadow-v-offset: 5px;  /* vertical */
+  --box-shadow-blur: 5px;
+}
+
+.box {
+  background-color: var(--box-bg-color);
+  padding: var(--box-padding);
+  border: 1px solid var(--box-main-color);
+  box-shadow:
+  var(--box-shadow-h-offset)
+  var(--box-shadow-v-offset)
+  var(--box-shadow-blur)
+  var(--box-main-color);
+}
+.box h1 {
+  color: var(--box-main-color);
+}
+
+.box p {
+  color: var(--box-p-color, #555);
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
